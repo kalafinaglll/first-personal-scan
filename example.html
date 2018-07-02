@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+<body>
+    <form name='input' action='/' method='post'>
+        please input the ip address:
+        <input type='text' name='ip'/>:
+        <input type='text' name='port'/>
+          <select action="/" name='mode' method="post">
+          <OPTION VALUE="masscan">masscan</OPTION>
+          <OPTION VALUE="pynmap">pynmap</OPTION>
+          </SELECT>
+        <input type='submit' value='send'/>
+        <p>please input the ip_address like 192.168.1.0/24</p>>
+    </form>
+
+    <p>{{resultpage}}</p>
+     <ul>
+           {%for i in items%}
+           <li>{{escape(i)}}</li>
+           {%end%}
+     </ul>
+</body>
+</html>
